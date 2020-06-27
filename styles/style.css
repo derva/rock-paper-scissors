@@ -1,0 +1,20 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    height: 155px;
+    background-color: #6B96C1;
+    color: #fff;
+    text-align: center;
+}
+.logo h3{
+    font-family: Roboto;
+    font-size: 42px;
+    margin: 25px auto;
+}
+.logo p{
+    font-family: Arial, Helvetica, sans-serif;
+}

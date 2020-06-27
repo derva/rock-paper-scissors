@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <header>
+        <div class="logo">
+            <h3>ROCK PAPER SCISSORS</h3>
+            
+            <p>ROUND: <span id="roundCounter"><u>-</u></span> / 5</p>
+            
+        
+        </div>
+    </header>
+
+    <div>
+        <button onclick="playerMove(1); computerMove(); potez()">ROCK</button>
+        <button onclick="playerMove(2); computerMove(); potez()">PAPER</button>
+        <button onclick="playerMove(3); computerMove(); potez()">SCISSORS</button>
+    </div>
+
+    <div id="demo"></div>
+
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
