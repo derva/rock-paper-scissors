@@ -6,7 +6,7 @@ header{
     display: flex;
     justify-content: center;
     height: 155px;
-    background-color: #6B96C1;
+    background-color: #3498db;
     color: #fff;
     text-align: center;
 }
@@ -18,3 +18,63 @@ header{
 .logo p{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 120px 1fr 180px 1fr 90px 2fr;
+    margin: 15px;
+}
+
+.comp-icons{
+    display: flex;
+    flex-direction: column;
+}
+.comp-icons > div > img{
+    padding: 25px 15px;
+    
+    width: 90px;
+    height: 90px;
+}
+.comp-info{
+    text-align: center;
+    background-color: #2980b9;
+    font-size: 14px;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    margin-top: 50px;
+    font-family: Roboto;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 0 auto;
+    text-align: center;
+
+}
+.stats h2{
+    font-size: 48px;
+    font-family: Roboto;
+}
+
+.player-icons{
+    display: flex;
+    flex-direction: column;
+}
+.player-icons > div > img{
+    padding: 25px 15px;
+
+    width: 90px;
+    height: 90px;
+}
+.player-info{
+    background-color: #2980b9;
+    font-size: 14px;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-right: -20px;
+    font-family: Roboto;
