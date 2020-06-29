@@ -3,13 +3,14 @@ let playerPotez;
 let computerPotez;
 
 let demo = document.getElementById("demo");
+let results = document.getElementById("win-info");
 let round = document.getElementById("roundCounter");
 let playerName = document.getElementById("playerName");
 let playerNamePrompt;
 
 do {
     playerNamePrompt = prompt("Enter your name: ");
-    playerName.innerHTML = playerNamePrompt;
+    playerName.innerHTML = "<b>" + playerNamePrompt + "</b>";
     playerName = playerNamePrompt;
 } 
 while( playerNamePrompt == null || playerNamePrompt.length == 0 );
@@ -53,16 +54,16 @@ function computerMove(){
 function potez(){
     
     if( playerPotez == "rock" && computerPotez == "rock" || playerPotez == "paper" && computerPotez == "paper" || playerPotez == "scissors" && computerPotez == "scissors"){
-        demo.innerHTML = "draw";
+        results.innerHTML = "draw";
         
     }
     else if( playerPotez == "rock" && computerPotez ==  "scissors" || playerPotez == "paper" && computerPotez == "rock" || playerPotez == "scissors" && computerPotez == "paper"){
-        demo.innerHTML = playerName + " win";
+        results.innerHTML = "<b>" + playerName + "</b>" + " win this round";
         counterPlayer++;
         resultPlayer.innerHTML = counterPlayer;
         
     }else{
-        demo.innerHTML = "Computer win this round";
+        results.innerHTML = "Computer win this round";
         counterComputer++;
         resultComp.innerHTML = counterComputer;
         
@@ -82,7 +83,7 @@ function potez(){
         }
         counterPlayer = 0;
         counterComputer = 0;
-        
+        results.innerHTML = "Let's play";
         resultComp.innerHTML = 0;
         resultPlayer.innerHTML = 0;
         counter = 0;
