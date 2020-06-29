@@ -6,6 +6,8 @@ let demo = document.getElementById("demo");
 let results = document.getElementById("win-info");
 let round = document.getElementById("roundCounter");
 let playerName = document.getElementById("playerName");
+let potezi = document.getElementById("potezi");
+
 let playerNamePrompt;
 
 do {
@@ -55,15 +57,18 @@ function potez(){
     
     if( playerPotez == "rock" && computerPotez == "rock" || playerPotez == "paper" && computerPotez == "paper" || playerPotez == "scissors" && computerPotez == "scissors"){
         results.innerHTML = "draw";
+        potezi.innerHTML = "Player play: " + playerPotez + "<br>Computer play: " + computerPotez;
         
     }
     else if( playerPotez == "rock" && computerPotez ==  "scissors" || playerPotez == "paper" && computerPotez == "rock" || playerPotez == "scissors" && computerPotez == "paper"){
         results.innerHTML = "<b>" + playerName + "</b>" + " win this round";
+        potezi.innerHTML = "Player play: " + playerPotez + "<br>Computer play: " + computerPotez;
         counterPlayer++;
         resultPlayer.innerHTML = counterPlayer;
         
     }else{
         results.innerHTML = "Computer win this round";
+        potezi.innerHTML = "Player play: " + playerPotez + "<br>Computer play: " + computerPotez;
         counterComputer++;
         resultComp.innerHTML = counterComputer;
         

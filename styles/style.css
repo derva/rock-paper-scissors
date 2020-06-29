@@ -59,7 +59,10 @@ header{
     font-family: Poppins;
     font-size: 14px;
 }
-
+#potezi{
+    width: 200px;
+    font-family: Poppins;
+}
 .player-icons{
     display: flex;
     flex-direction: column;
