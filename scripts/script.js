@@ -52,29 +52,20 @@ function computerMove(){
 
 function potez(){
     
-    /*if( playerPotez < computerPotez ){
-        demo.innerHTML = "playerPotez < computerPotez";
-        counterComputer++;
-    }
-    else if( playerPotez == computerPotez){
-        demo.innerHTML = "playerPotez = computerPotez";
-    }
-    else{
-        demo.innerHTML = "playerPotez > computerPotez";
-        counterPlayer++;
-    }*/
-
     if( playerPotez == "rock" && computerPotez == "rock" || playerPotez == "paper" && computerPotez == "paper" || playerPotez == "scissors" && computerPotez == "scissors"){
         demo.innerHTML = "draw";
+        
     }
     else if( playerPotez == "rock" && computerPotez ==  "scissors" || playerPotez == "paper" && computerPotez == "rock" || playerPotez == "scissors" && computerPotez == "paper"){
         demo.innerHTML = playerName + " win";
         counterPlayer++;
         resultPlayer.innerHTML = counterPlayer;
+        
     }else{
         demo.innerHTML = "Computer win this round";
         counterComputer++;
         resultComp.innerHTML = counterComputer;
+        
     }
 
     if(counter > 4){
@@ -83,19 +74,18 @@ function potez(){
         }
         else if(counterComputer > counterPlayer){
             alert("Computer wins with resultat " + counterComputer + ":" + counterPlayer);
-            counterPlayer = 0;
-            counterComputer = 0;
+            
         }
         else{
             alert(playerName + " wins with resultat " + counterPlayer + ":" + counterComputer);
-            counterPlayer = 0;
-            counterComputer = 0;
-            resultPlayer = 0;
-            resultComp = 0;
+            
         }
+        counterPlayer = 0;
+        counterComputer = 0;
+        
         resultComp.innerHTML = 0;
         resultPlayer.innerHTML = 0;
         counter = 0;
     }
-    round.innerHTML = "<u>" + ++counter +"</u>";
+    round.innerHTML = "<u>" + ++counter  +"</u>";
 }
